@@ -1,0 +1,234 @@
+/*                                      ELEMENTS                                           */
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #A7C4BC;
+    margin: 0 auto;
+    font-family: 'Noto Sans', sans-serif;
+}
+
+h1, h2, h3 {
+    text-align: center;
+    padding: 0.5em;
+    font-family: 'Oswald', sans-serif;
+    text-transform: uppercase;
+}
+
+article > h1, article > h2, article > h3 {
+    margin-top: 2em;
+    margin-bottom: -0.5em;
+}
+
+p {
+    text-align: justify;
+    padding: 1.5em;
+    font-size: 1.15rem;
+}
+
+img {
+    display: block;
+    margin: 0 auto;
+    max-width: 80%;
+    height: auto;
+    box-shadow: rgba(0, 0, 0, 0.16) 0 3px 6px, rgba(0, 0, 0, 0.23) 0 3px 6px;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+a:hover {
+    color: #2E2E2E;
+}
+
+iframe {
+    width: 75%;
+    height: 350px;
+    border: none;
+}
+
+hr {
+    max-width: 80%;
+    margin: 0 auto;
+    border: 0;
+    height: 0;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+/*                                      CLASSES                                     */
+
+.lista {
+    margin-top: 2em;
+    font-size: 1.1em;
+}
+
+.lista li {
+    margin: 0.2em;
+}
+.mesta {
+    width: 50%;
+    margin: 0 auto;
+}
+
+.container {
+    margin: 1em;
+    box-shadow: rgba(255, 255, 255, 0.1) 0 1px 1px 0 inset, rgba(50, 50, 93, 0.25) 0 50px 100px -20px, rgba(0, 0, 0, 0.3) 0 30px 60px -30px;
+    background-color: #DFEEEA;
+}
+
+.ohrid-yt, .virtual-tour {
+    text-align: center;
+}
+
+.virtual-tour-item {
+    margin-bottom: 1.5em;
+}
+
+.copy {
+    padding: 1em 0.5em;
+    text-align: center;
+    background-color: #2E2E2E;
+    font-size: 0.75em;
+    color: white;
+    height: 1.25em;
+}
+
+.to-the-top{
+    position: fixed;
+    bottom: 1em;
+    right: 1em;
+    width: 2em;
+    height: 2em;
+    float: left;
+    margin: 1em;
+}
+
+/*                                      IDs                                     */
+
+#virtual-tour-link {
+    display: block;
+    padding: 1em;
+    background-color: #2E2E2E;
+    text-align: center;
+    color: white;
+}
+
+#virtual-tour-link:hover {
+    background-color: #333;
+    text-shadow: 0.25px 0.25px white;
+    transition: background-color 1000ms linear;
+}
+
+#bottom {
+    display: block;
+    padding: 1em;
+    background-color: #78b0a0;
+    text-align: center;
+}
+
+#bottom:hover {
+    background-color: #458a76;
+    transition: background-color 1000ms linear;
+    color: white;
+    text-shadow: 1px 1px black;
+}
+
+#go-back {
+    width:2em;
+    height:2em;
+    float: left;
+    margin: 1em;
+    position: absolute;
+}
+/*                                      MEDIA QUERY                                       */
+
+                                        /* SMARTPHONE */
+
+@media screen and (max-width: 767px){
+    body {
+        max-width: 95%;
+    }
+    p {
+        font-size: 1.2rem;
+        text-align: left;
+    }
+    iframe {
+        height: 150px;
+    }
+    img {
+        max-width: 100%;
+    }
+    h1.virtual-tour-title {
+        margin-left: 1em;
+    }
+    h1:not(.virtual-tour-title), h2, h3 {
+        text-align: left;
+        margin-left: .75em;
+    }
+    .virtual-tour-item {
+        height: 16.5em;
+    }
+    .mesta {
+        margin-left: 4em;
+    }
+    .mesta > h2 {
+        margin-left: -1.8em;
+    }
+    .mesta ol {
+        margin-left: -.5em;
+    }
+}
+
+                                        /* TABLET */
+
+@media screen and (min-width: 768px) and (max-width: 1023px){
+    body {
+        max-width: 85%;
+    }
+    p {
+        column-count: 2;
+        text-align: left;
+    }
+    iframe {
+        height: 250px;
+    }
+    img {
+        max-width: 90%;
+    }
+    .virtual-tour-item {
+        height: 18.5em;
+    }
+}
+
+                                        /* DESKTOP */
+
+@media only screen and (min-width: 1024px) {
+    body {
+        max-width: 70%;
+    }
+    img {
+        max-width: 78%;
+        max-height: 70%;
+    }
+    p {
+        padding: 1.5em 4em;
+    }
+    iframe {
+        height: 300px;
+    }
+    .virtual-tour-item {
+        height: 20.5em;
+    }
+    .mesta ol {
+        margin-left: 4em;
+    }
+}
